@@ -12,8 +12,9 @@ data = pd.read_csv(file_path)
 # Group the data by energy source and sum up the cost savings for each
 aggregated_data = data.groupby("Energy_Source")["Cost_Savings_USD"].sum()
 
-# Define custom colors for the pie chart sections
-colors = ['#ff9999', '#66b3ff', '#99ff99', '#ffcc99', '#c2c2f0', '#ffb3e6']
+# Define custom colors for the pie chart sections.
+# The colors were changed for a more appropriate representation of the data. 
+colors = ['#e80000', '#66b3ff', '#34cd4b', '#d4dd22', '#c2c2f0', '#a82fce']
 
 #To create and display the pie chart when button is clicked
 def show_pie_chart():
@@ -30,8 +31,8 @@ def show_pie_chart():
     )
     
   # Add a title to the chart
-    plt.title("Proportion of Total Cost Savings by Energy Source", fontsize=16, fontweight='bold')
-
+    plt.title("Proportion of Total Cost Savings by Energy Source (Pie-Chart)", fontsize=16, fontweight='bold')
+    
   # Add a legend to the side with energy source labels
     plt.legend(wedges, aggregated_data.index, title="Energy Sources", loc="center left", bbox_to_anchor=(1, 0.5), fontsize=12)
 
