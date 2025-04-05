@@ -2,7 +2,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import tkinter as tk
+import tkinter as tk #for GUI creation 
 from tkinter import ttk
 
 # Load the cleaned energy usage data from a CSV file
@@ -42,14 +42,21 @@ def show_pie_chart():
 # # Display the pie chart
     plt.show()
 
-
-window = tk.Tk()
+# Create the main window for the GUI.
+window = tk.Tk() 
+#Setting the title and size of the window.
 window.title("Group Visualization: Cost Savings")
-window.geometry("400x200")
+# Setting the size of the window.
+window.geometry("400x200") 
 
-
+# Creating a label to introduce the pie chart
 btn = ttk.Button(window, text="Click here to Show Pie Chart", command=show_pie_chart)
-btn.pack(pady=60)
+# Adding some padding around the button
+btn.pack(pady=60) 
 
-
+# Rendering the GUI window and waiting for user interaction.
 window.mainloop()
+# The code ends here, and the GUI will remian open until the user closes it. 
+# The pie chart will be displayed when the button is clicked. 
+# The pie chart will show the proportion of total cost savings by energy sources.
+# The chart will be displayed using matplotlib, and the GUI is created using tinker.
