@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the dataset and read the csv file
-df= pd.read_csv (r"C:/Users/menac/OneDrive/Desktop/csws/4516CSQR-GlobalEnergy-Group-1-/Cleaned_Renewable_Energy_Usage_Sampled.csv")
+df= pd.read_csv (r"C:\Users\menac\OneDrive\Desktop\csws\4516CSQR-GlobalEnergy-Group-1-\data filtering-cleaning files\Cleaned_Renewable_Energy_Usage_Sampled.csv")
 
 # Group the data by income level and calculate the average energy usage (in specific order)
 avg_usage= df.groupby('Income_Level') ['Monthly_Usage_kWh' ].mean( ).reindex(['High', 'Middle', 'Low'])

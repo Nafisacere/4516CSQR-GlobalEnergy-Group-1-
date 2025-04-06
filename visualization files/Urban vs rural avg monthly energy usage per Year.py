@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # load the data from csv
-df = pd.read_csv (r"C:\Users\menac\OneDrive\Desktop\csws\4516CSQR-GlobalEnergy-Group-1-\Cleaned_Renewable_Energy_Usage_Sampled.csv")
+df = pd.read_csv (r"C:\Users\menac\OneDrive\Desktop\csws\4516CSQR-GlobalEnergy-Group-1-\data filtering-cleaning files\Cleaned_Renewable_Energy_Usage_Sampled.csv")
 
 #calculate average monthly usage grouped by year and area type
 usage_by_year = df.groupby (['Year', 'Urban_Rural'] ) ['Monthly_Usage_kWh'].mean( ).unstack()
